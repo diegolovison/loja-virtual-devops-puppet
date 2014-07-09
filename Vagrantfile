@@ -20,6 +20,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     web_config.vm.network :private_network, :ip => "192.168.33.12"
   end
 
+  config.vm.define :monitor do |monitor_config|
+    monitor_config.vm.network :private_network, :ip => "192.168.33.14"
+  end
+
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
